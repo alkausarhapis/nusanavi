@@ -1,0 +1,384 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;700&display=swap");
+
+/* CSS Vars */
+:root {
+  --primary-color: #1e1e1e;
+  --secondary-color: #fc8949;
+  --tertiary-color: #fff;
+  --quanternary-color: #6c6c6c;
+  --bg-color: #e0e0e0;
+
+  --header-font: "DM Serif Display", serif;
+  --content-font: "Inter", sans-serif;
+  --header1-font-size: 4rem;
+  --header2-font-size: 3.5rem;
+  --card-header1-size: 1.8rem;
+  --content-font-size: 1rem;
+
+  --navbar-height: 110px;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--primary-color);
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--primary-color);
+  background-color: var(--bg-color) !important;
+}
+
+h2,
+h3,
+p {
+  font-family: var(--content-font);
+}
+
+section {
+  padding-top: var(--navbar-height);
+  text-align: center;
+  min-height: 90vh;
+}
+
+/* Font color */
+.priFontCol {
+  color: var(--primary-color);
+}
+
+.secFontCol {
+  color: var(--secondary-color);
+}
+
+.terFontCol {
+  color: var(--tertiary-color);
+}
+
+.quaFontCol {
+  color: var(--quanternary-color);
+}
+
+/* Nav */
+.navbar-brand img {
+  width: 170px;
+}
+
+.custNavLink {
+  color: var(--tertiary-color);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.custNavLink:hover {
+  opacity: 0.6;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.customNav {
+  transition: background-color 0.4s ease-in-out;
+}
+
+.navScrolled {
+  background-color: var(--primary-color);
+}
+
+.navActive {
+  color: var(--secondary-color);
+}
+
+/* Card */
+.customCard {
+  width: 30%;
+  height: 200px;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.customCardOverlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  transition: opacity 1s ease-in-out;
+}
+
+.customCard:hover .customCardOverlay {
+  opacity: 0;
+}
+
+.customcardDescription {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.customCardHeader {
+  font-weight: 700;
+  font-size: var(--card-header1-size);
+}
+
+.customcardDescription .tempat {
+  margin-bottom: -2px;
+}
+
+.customCard:hover .customcardDescription {
+  opacity: 0;
+}
+
+.imgCard {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.customCard:hover .imgCard {
+  transform: scale(1.2);
+}
+
+.customCardFooter {
+  background-color: var(--primary-color);
+}
+
+/* Link */
+.link {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+/* Pemisah */
+.navPemisah {
+  margin-top: var(--navbar-height);
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.navPemisah > a {
+  color: var(--quanternary-color);
+}
+
+.navPemisah > a:hover {
+  opacity: 0.6;
+}
+
+/* Header (welcome page) */
+.wPage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/bgimg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+}
+
+.titleWrapper {
+  height: 75vh;
+}
+
+.wPTitle {
+  font-family: var(--header-font);
+  font-size: var(--header1-font-size);
+  padding-top: var(--navbar-height);
+}
+
+.descWPage {
+  height: 100px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+
+.descContent {
+  font: var(--content-font);
+  font-size: var(--content-font-size);
+  width: 45%;
+}
+
+/* Main */
+main {
+  background-color: var(--bg-color);
+  max-width: 100vw;
+  margin: 0;
+}
+
+.tentangContainer {
+  width: 50%;
+}
+
+.headerPulau {
+  color: var(--primary-color);
+  font-family: var(--header-font);
+  font-size: var(--header2-font-size);
+}
+
+.descPulau {
+  color: var(--quanternary-color);
+  width: 35%;
+}
+
+.pariwisata,
+.budaya,
+.makanan,
+.buahtangan {
+  margin-top: var(--navbar-height);
+}
+
+.customCardContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.card-body {
+  background-color: var(--primary-color);
+}
+
+.customCardText {
+  color: var(--bg-color);
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  text-align: center;
+  padding-top: var(--navbar-height);
+  height: 100vh;
+}
+
+.profilImg {
+  width: 20%;
+  border-radius: 100%;
+}
+
+/* Misc (responsive n stuffs) */
+@media screen and (max-width: 1000px) {
+  :root {
+    font-size: 13px;
+
+    --header1-font-size: 3.5rem;
+    --header2-font-size: 3rem;
+    --card-header1-size: 1.3rem;
+    --navbar-height: 100px;
+  }
+
+  .navbar-brand img {
+    width: 140px;
+  }
+
+  .navLinkWrapper {
+    padding: 10px 0 10px 0;
+  }
+
+  .descContent {
+    width: 55%;
+  }
+
+  .descPulau {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  :root {
+    font-size: 14px;
+
+    --header1-font-size: 3rem;
+    --header2-font-size: 3rem;
+    --card-header1-size: 2rem;
+  }
+
+  .navbar-brand img {
+    width: 140px;
+  }
+
+  .tentangContainer {
+    width: 90%;
+  }
+
+  .descContent {
+    width: 75%;
+  }
+
+  .descPulau {
+    width: 65%;
+  }
+
+  .customCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .customCard {
+    width: 90%;
+    height: 250px;
+  }
+
+  .navPemisah > a {
+    font-size: 0.8rem;
+  }
+
+  .navPemisah > span {
+    font-size: 0.8rem;
+  }
+
+  .profilImg {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 14px;
+
+    --header1-font-size: 2.3rem;
+    --header2-font-size: 2.5rem;
+    --card-header1-size: 1.6rem;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  .descContent {
+    width: 90%;
+  }
+
+  .tentangContainer {
+    width: 90%;
+  }
+
+  .descPulau {
+    width: 80%;
+  }
+
+  .navPemisah > a {
+    text-align: center;
+    padding: 2px;
+    font-size: 0.7rem;
+  }
+
+  .navPemisah > span {
+    padding: 1px;
+    font-size: 0.7rem;
+  }
+}
